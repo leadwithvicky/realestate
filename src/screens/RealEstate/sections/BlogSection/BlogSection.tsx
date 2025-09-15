@@ -9,7 +9,7 @@ export const BlogSection = (): JSX.Element => {
   const blogPosts = [
     {
       image: "/rectangle-55.png",
-      title: "Building Strong Foundations, Why It Matters",
+      title: "Building Strong Foundations?",
       date: "10 May 2025",
     },
     {
@@ -84,7 +84,7 @@ export const BlogSection = (): JSX.Element => {
   };
 
   return (
-    <section className="w-full bg-[#f7fbfe] py-8 md:py-16">
+    <section className="w-full bg-[#f7fbfe] py-8 md:py-16 ">
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 md:mb-16 gap-4">
@@ -108,7 +108,7 @@ export const BlogSection = (): JSX.Element => {
         </div>
 
         {/* Blog Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 md:mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 md:mb-16 ">
           {blogPosts.map((post, index) => (
             <Card
               key={index}
@@ -119,7 +119,7 @@ export const BlogSection = (): JSX.Element => {
                   <img
                     src={post.image}
                     alt="Blog post"
-                    className="w-full h-[250px] md:h-[358px] object-cover rounded-[15px]"
+                    className="w-full h-[250px] md:h-[358px] object-cover rounded-[15px] parallelogram"
                   />
                   <div className="absolute top-3.5 left-1/2 transform -translate-x-1/2 md:left-[78px] md:transform-none">
                     <img
@@ -138,10 +138,10 @@ export const BlogSection = (): JSX.Element => {
                   <img
                     src="/rectangle-67.svg"
                     alt="Content background"
-                    className="w-full h-[60px] md:h-[73px]"
+                    className="w-full h-[60px] md:h-[73px] "
                   />
                   <div className="absolute inset-0 flex items-center justify-between px-4 md:px-10">
-                    <h3 className="[font-family:'Inter',Helvetica] font-medium text-black text-sm md:text-lg max-w-[200px] md:max-w-[251px]">
+                    <h3 className="[font-family:'Inter',Helvetica] pl-3 font-medium text-black text-sm md:text-lg max-w-[200px] md:max-w-[251px]">
                       {post.title}
                     </h3>
                     <img src="/vector-18.svg" alt="Arrow" className="w-5 h-5 md:w-6 md:h-6" />
@@ -153,13 +153,13 @@ export const BlogSection = (): JSX.Element => {
         </div>
 
         {/* Partners Section */}
-        <div className="grid grid-cols-2 md:flex justify-center items-center gap-8 md:gap-16 mb-8 md:mb-16">
+        <div className="grid grid-cols-2 md:flex justify-center items-center gap-8 md:gap-16 mb-8 md:mb-16 ">
           {partners.map((partner, index) => (
             <div key={index} className="flex items-center gap-4">
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="w-[60px] h-[60px] md:w-[95px] md:h-[95px]"
+                className="w-[60px] h-[60px] md:w-[95px] md:h-[95px] parallelogram"
               />
               <span className="[font-family:'Inter',Helvetica] font-bold text-[#00000080] text-lg md:text-[32px]">
                 {partner.name}
@@ -184,7 +184,7 @@ export const BlogSection = (): JSX.Element => {
             <Button
               onClick={handleGetEstimatedRate}
               variant="outline"
-              className="h-auto px-4 py-2 rounded-[5px] border-white text-white hover:bg-white hover:text-black w-full md:w-auto"
+              className="h-auto px-4 py-2 rounded-[5px] border-white text-black hover:bg-white hover:text-black w-full md:w-auto"
             >
               <span className="[font-family:'Poppins',Helvetica] font-medium text-base mr-2">
                 GET ESTIMATED RATE
@@ -192,20 +192,20 @@ export const BlogSection = (): JSX.Element => {
               <img
                 src="/vector-4.svg"
                 alt="Arrow"
-                className="w-[26px] h-[26px]"
+                className="w-[26px] h-[26px] "
               />
             </Button>
           </div>
         </div>
 
         {/* Contact Section */}
-        <div id="contact" className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 md:mb-16">
+        <div id="contact" className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 md:mb-16 mt-4">
           {/* Left Side - Image with overlay */}
           <div className="relative rounded-[30px] overflow-hidden">
             <img
               src="/rectangle-70.png"
               alt="Contact"
-              className="w-full h-[400px] md:h-[635px] object-cover"
+              className="w-full h-[400px] md:h-[635px] object-cover "
             />
             <img
               src="/rectangle-71.svg"

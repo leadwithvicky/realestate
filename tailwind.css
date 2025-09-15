@@ -196,3 +196,7 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+.parallelogram {
+  clip-path: polygon(12% 0, 100% 0, 88% 100%, 0% 100%);
+  border-radius: 12px; /* optional */
+}

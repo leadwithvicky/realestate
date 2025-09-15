@@ -73,34 +73,35 @@ export const AboutUsSection = (): JSX.Element => {
           Building with trust, driven by experience
         </h2>
 
-        <div className="flex flex-col lg:flex-row justify-between items-start mb-8 md:mb-[434px] gap-8">
+        <div className="flex flex-col lg:flex-row justify-between items-start mb-8 md:mb-[80px] gap-8">
+          {/* Left: Tabs and materials list */}
           <div className="flex-1 max-w-full lg:max-w-[507px]">
             <Tabs defaultValue="materials" className="w-full">
-              <TabsList className="h-16 md:h-20 bg-transparent p-0 border-b border-[#d9d9d9] rounded-none w-full justify-start flex-wrap md:flex-nowrap">
+              <TabsList className="h-14 md:h-20 bg-transparent p-0 border-b border-[#d9d9d9] rounded-none w-full justify-start flex-wrap md:flex-nowrap">
                 <TabsTrigger
                   value="materials"
-                  className="h-16 md:h-20 px-1.5 [font-family:'Poppins',Helvetica] font-medium text-black text-lg md:text-2xl leading-[60px] md:leading-[80px] bg-transparent border-b-2 border-[#00000040] data-[state=active]:border-[#00000040] rounded-none"
+                  className="h-14 md:h-20 px-1.5 [font-family:'Poppins',Helvetica] font-medium text-black text-base md:text-2xl leading-[48px] md:leading-[80px] bg-transparent border-b-2 border-[#00000040] data-[state=active]:border-[#00000040] rounded-none"
                 >
                   Materials
                 </TabsTrigger>
                 <TabsTrigger
                   value="technology"
-                  className="h-16 md:h-20 px-4 md:px-[25px] [font-family:'Poppins',Helvetica] font-medium text-black text-lg md:text-2xl leading-[60px] md:leading-[80px] bg-transparent border-b-2 border-transparent rounded-none"
+                  className="h-14 md:h-20 px-4 md:px-[25px] [font-family:'Poppins',Helvetica] font-medium text-black text-base md:text-2xl leading-[48px] md:leading-[80px] bg-transparent border-b-2 border-transparent rounded-none"
                 >
                   Technology
                 </TabsTrigger>
                 <TabsTrigger
                   value="approved"
-                  className="h-16 md:h-20 px-4 md:px-[25px] [font-family:'Poppins',Helvetica] font-medium text-black text-lg md:text-2xl leading-[60px] md:leading-[80px] bg-transparent border-b-2 border-transparent rounded-none"
+                  className="h-14 md:h-20 px-4 md:px-[25px] [font-family:'Poppins',Helvetica] font-medium text-black text-base md:text-2xl leading-[48px] md:leading-[80px] bg-transparent border-b-2 border-transparent rounded-none"
                 >
                   Approved
                 </TabsTrigger>
               </TabsList>
             </Tabs>
 
-            <div className="mt-8 md:mt-[68px] space-y-4 md:space-y-[35px]">
+            <div className="mt-6 md:mt-[48px] space-y-3 md:space-y-[24px]">
               {materials.map((material, index) => (
-                <div key={index} className="flex items-center gap-4 md:gap-[30px]">
+                <div key={index} className="flex items-center gap-3 md:gap-[18px]">
                   <div className="w-[21px] h-3.5 relative flex-shrink-0">
                     <img
                       className="absolute w-4 h-3.5 top-0 left-[5px]"
@@ -121,21 +122,22 @@ export const AboutUsSection = (): JSX.Element => {
             </div>
           </div>
 
-          <div className="w-full lg:w-[565px] h-[300px] md:h-[462px] rounded-[20px] bg-[url(/rectangle-13.png)] bg-cover bg-[50%_50%] relative flex items-center justify-center">
-            <img className="w-[68px] h-[68px]" alt="Frame" src="/frame-1.svg" />
+          {/* Right: Angled image container with play button, responsive aspect */}
+          <div className="w-full max-w-full lg:w-[420px] aspect-[16/10] md:aspect-auto md:h-[340px] relative flex items-center justify-center">
+            <div className="w-full h-full bg-[url(/rectangle-13.png)] bg-cover bg-center rounded-[24px] overflow-hidden" /*style={{clipPath:'polygon(5% 5%, 90% 5%, 100% 185%, 100% 100%, 10% 100%)'}}*/>
+              <div className="w-full h-full flex items-center justify-center">
+                <img className="w-[48px] h-[48px] md:w-[68px] md:h-[68px]" alt="Frame" src="/frame-1.svg" />
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="relative mb-8 md:mb-[308px]">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4">
+        {/* Features in white boxes */}
+        <div className="relative mb-8 md:mb-[48px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="relative text-center">
-                <img
-                  className="w-full max-w-[338px] h-[100px] md:h-[145px] mb-4 md:mb-[22px] mx-auto"
-                  alt="Rectangle"
-                  src="/rectangle-19.svg"
-                />
-                <div className="absolute -top-4 md:-top-[22px] left-1/2 transform -translate-x-1/2 w-11 h-11 bg-[#dbebf6] rounded-[22px] border-2 border-[#d9d9d9] flex items-center justify-center">
+              <div key={index} className="bg-white rounded-[16px] shadow-md flex flex-col items-center py-8 px-4 min-h-[160px]">
+                <div className="w-12 h-12 bg-[#dbebf6] rounded-full border-2 border-[#d9d9d9] flex items-center justify-center mb-4">
                   <div className="w-[21px] h-[21px] rounded-[10.5px] border border-[#8a7952] flex items-center justify-center">
                     <img
                       className="w-[17px] h-[13px]"
@@ -144,36 +146,30 @@ export const AboutUsSection = (): JSX.Element => {
                     />
                   </div>
                 </div>
-                <div className="w-full text-center">
-                  <span className="[font-family:'Poppins',Helvetica] font-medium text-black text-lg md:text-2xl">
-                    {feature.title}
-                  </span>
-                </div>
+                <span className="[font-family:'Poppins',Helvetica] font-medium text-black text-lg md:text-2xl text-center">
+                  {feature.title}
+                </span>
               </div>
             ))}
           </div>
         </div>
 
-        <Card className="w-full h-auto md:h-[261px] rounded-[25px] overflow-hidden bg-[linear-gradient(90deg,rgba(205,216,227,1)_0%,rgba(198,213,224,1)_50%,rgba(181,200,212,1)_100%)] border-0">
-          <CardContent className="relative w-full h-full p-8 md:p-0">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:relative md:w-[1623px] md:h-[672px] md:top-[-198px] md:left-[-179px] md:bg-[url(/d0aa474a60ca27782b4fed56654c74bc-1.png)] md:bg-cover md:bg-[50%_50%]">
-              {statistics.map((stat, index) => (
-                <div key={index} className="text-center md:absolute">
-                  <div
-                    className={`md:absolute md:top-[296px] ${stat.leftNumber} [font-family:'Inter',Helvetica] font-semibold text-black text-2xl md:text-[50px] tracking-[0] leading-[normal]`}
-                  >
-                    {stat.number}
-                  </div>
-                  <div
-                    className={`md:absolute md:top-[369px] ${stat.leftLabel} [font-family:'Inter',Helvetica] font-medium text-black text-sm md:text-[28px] tracking-[0] leading-[normal] mt-2 md:mt-0`}
-                  >
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
+        {/* Statistics bar */}
+        <div className="w-full rounded-[25px] overflow-hidden bg-gradient-to-r from-[#cdd8e3] via-[#c6d5e0] to-[#b5c8d4] border-0 py-8 md:py-12 px-4 md:px-0 flex flex-col items-center relative">
+          <img src="/d0aa474a60ca27782b4fed56654c74bc-1.png" alt="bg" className="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none select-none" />
+          <div className="relative w-full grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 z-10">
+            {statistics.map((stat, index) => (
+              <div key={index} className="flex flex-col items-center justify-center py-4">
+                <span className="[font-family:'Inter',Helvetica] font-semibold text-black text-3xl md:text-[50px] tracking-[0] leading-[normal]">
+                  {stat.number}
+                </span>
+                <span className="[font-family:'Inter',Helvetica] font-medium text-black text-base md:text-[22px] tracking-[0] leading-[normal] mt-2 text-center">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
