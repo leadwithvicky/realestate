@@ -32,13 +32,13 @@ export const HeroSection = (): JSX.Element => {
       image: "/rectangle-10.png",
       title: "Experienced team",
       description:
-        "Let by seasoned professionals commited to precision, safety and quality",
+        "Let by seasoned professionals commited to precision, safety.",
     },
     {
       image: "/rectangle-11.png",
       title: "Modern equipment",
       description:
-        "From automated tools to heavy duty machinery we're powered by innovation",
+        "From automated to heavy duty machinery we're powered by innovation.",
     },
   ];
 
