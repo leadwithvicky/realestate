@@ -100,11 +100,11 @@ export const HeroSection = (): JSX.Element => {
 
         {/* ✅ Floating Feature Cards overlapping bottom of Hero Image */}
         <div className="w-full flex justify-center -mt-20 z-30 px-4 md:px-6">
-          <div className="bg-white/95 backdrop-blur-sm rounded-[18px] shadow-xl grid grid-cols-1 md:grid-cols-3 gap-6 px-6 py-6 max-w-[1200px] w-full">
+          <div className="bg-white/95 backdrop-blur-sm rounded-[18px] shadow-xl grid grid-cols-1 md:grid-cols-3 gap-6 px-6 py-6 max-w-[1200px] w-full mb-2">
             {featureCards.map((card, index) => (
               <Card
                 key={index}
-                className="flex-1 bg-white rounded-[15px] border-0 shadow-md flex flex-row items-center gap-4 p-4"
+                className="flex-1 bg-white rounded-[15px] border-0 shadow-md flex flex-row items-center gap-4 p-4 "
               >
                 <img
                   className="w-[100px] h-[80px] md:w-[110px] md:h-[90px] rounded-[8px] object-cover flex-shrink-0"
