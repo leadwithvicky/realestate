@@ -46,19 +46,35 @@ export const BlogSection = (): JSX.Element => {
   const footerLinks = [
     {
       title: "About Us",
-      links: [],
+      links: [
+        { name: "Our Story", href: "#" },
+        { name: "Team", href: "#" },
+        { name: "Careers", href: "#" },
+      ],
     },
     {
       title: "Discover",
-      links: [],
+      links: [
+        { name: "Services", href: "#" },
+        { name: "Projects", href: "#" },
+        { name: "Blog", href: "#" },
+      ],
     },
     {
       title: "Explore",
-      links: [],
+      links: [
+        { name: "Locations", href: "#" },
+        { name: "Resources", href: "#" },
+        { name: "Contact", href: "#" },
+      ],
     },
     {
       title: "Address",
-      links: [],
+      links: [
+        { name: "123 Main St", href: "#" },
+        { name: "City, State 12345", href: "#" },
+        { name: "Phone: (123) 456-7890", href: "#" },
+      ],
     },
   ];
 
@@ -287,6 +303,18 @@ export const BlogSection = (): JSX.Element => {
                 <h6 className="text-lg md:text-2xl [font-family:'Poppins',Helvetica] text-black mb-2 md:mb-4">
                   {section.title}
                 </h6>
+                <ul>
+                  {section.links.map((link, linkIndex) => (
+                    <li key={linkIndex} className="mb-1">
+                      <a
+                        href={link.href}
+                        className="text-sm md:text-base text-[#5984c8] hover:underline [font-family:'Poppins',Helvetica]"
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
