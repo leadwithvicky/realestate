@@ -156,7 +156,7 @@ export const BlogSection = (): JSX.Element => {
                     alt="Content background"
                     className="w-full h-[60px] md:h-[73px] "
                   />
-                  <div className="absolute inset-0 flex items-center justify-between px-4 md:px-10">
+                  <div className="absolute  inset-0 flex items-center justify-between  px-10">
                     <h3 className="[font-family:'Inter',Helvetica] pl-3 font-medium text-black text-sm md:text-lg max-w-[200px] md:max-w-[251px]">
                       {post.title}
                     </h3>
