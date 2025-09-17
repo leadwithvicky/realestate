@@ -73,10 +73,11 @@ export const HeroSection = (): JSX.Element => {
         {/* Hero Container */}
         <div className="w-full rounded-[18px] overflow-hidden relative">
           {/* Hero Image */}
+        
           <img
             className="w-full h-[500px] md:h-[600px] lg:h-[650px] object-cover object-center"
             alt="Hero"
-            src="/rectangle-1.png"
+            src="https://res.cloudinary.com/denikmblr/image/upload/v1758114497/Rectangle_1_bonwpv.png"
           />
 
           {/* Overlay Heading & Button */}
@@ -129,9 +130,9 @@ export const HeroSection = (): JSX.Element => {
           <h1 className="[font-family:'Poppins',Helvetica] font-bold text-black text-[28px] md:text-[32px]">
             STRUCTON
           </h1>
-          <nav className="hidden md:flex items-center bg-white rounded-[12px] border-2 border-[#00000026] px-4 py-2 mx-auto">
+          <nav className="hidden fixed top-5 md:flex items-center justify-center  bg-white rounded-[12px] border-2 border-[#00000026] px-4 py-2 mx-auto w-[45%] left-[27%] ">
             <NavigationMenu>
-              <NavigationMenuList className="flex gap-6">
+              <NavigationMenuList className="flex gap-6 w-full">
                 {navSections.map((item, index) => (
                   <NavigationMenuItem key={index}>
                     <NavigationMenuLink
@@ -140,7 +141,7 @@ export const HeroSection = (): JSX.Element => {
                         e.preventDefault();
                         handleNavClick(item.href, item.label);
                       }}
-                      className={`[font-family:'Poppins',Helvetica] text-base ${
+                      className={`[font-family:'Poppins',Helvetica] text-base  ${
                         activeNav === item.label
                           ? "font-semibold"
                           : "font-medium"
